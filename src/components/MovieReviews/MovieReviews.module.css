@@ -1,0 +1,15 @@
+.list {
+    text-align: left;
+    list-style-type: none;
+    padding: 20px;
+}
+
+
+.title {
+    color: #ff884b;
+}
+
+.text {
+    text-align: center;
+    padding: 30px;
+}
