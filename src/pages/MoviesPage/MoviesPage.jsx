@@ -15,7 +15,7 @@ export default function MoviesPage({ movie }) {
   const query = searchParams.get("query") ?? "";
 
   const updateSearchParams = ({ query }) => {
-    const updateParams = new URLSearchParams(searchParams);
+    const updateParams = { ...searchParams };
 
     if (query !== "") {
       updateParams.set("query", query);
@@ -39,7 +39,7 @@ export default function MoviesPage({ movie }) {
       }
     };
     getMovies();
-  }, [searchParams]);
+  }, [query]);
 
   const handleSubmit = ({ query }) => {
     updateSearchParams({ query });
