@@ -15,14 +15,12 @@ export default function MoviesPage({ movie }) {
   const query = searchParams.get("query") ?? "";
 
   const updateSearchParams = ({ query }) => {
-    const updateParams = { ...searchParams };
-
     if (query !== "") {
-      updateParams.set("query", query);
+      searchParams.set("query", query);
     } else {
-      updateParams.delete("query");
+      searchParams.delete("query");
     }
-    setSearchParams(updateParams);
+    setSearchParams(searchParams);
   };
 
   useEffect(() => {
